@@ -22,19 +22,25 @@ recipe // { eggs: 3 }
 // console.log(recipe); */
 
 var playlist = {
-  'Slowdive': "Eenie Meenie",
-  'My Bloody Valentine': "Baby",
-  'Phil Ochs': "Mr. Roboto"
+  'Slowdive': "Sugar for the Pill",
+  'My Bloody Valentine': "Only Shallow",
+  'Phil Ochs': "Draft Dodger Rag"
 };
 
 function updatePlaylist(playlist, artistName, songTitle) {
   return Object.assign({}, playlist, {[artistName]:songTitle});
 };
 
+/*
+function updatePlaylist(playlist, artistNameAndSongTitle) {
+  return Object.assign({}, playlist, artistNameAndSongTitle);
+};
+*/
+
 function removeFromPlaylist(playlist, artistName) {
   delete playlist[artistName];
   return playlist;
 }
 
-// console.log(updatePlaylist(playlist, 'Phil Ochs', 'Draft Dodger Rag'));
-// console.log(removeFromPlaylist(playlist, 'Phil Ochs'));
+// console.log(updatePlaylist(playlist, {'Justin Bieber': 'Sorry'}))
+// console.log(removeFromPlaylist(playlist, 'My Bloody Valentine'));
